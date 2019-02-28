@@ -43,9 +43,11 @@ void PrintIntro (){
     return;
 }
 
+FBullCowGame BCGame; // instantiate a new game
+
 void PlayGame() {
     
-    //FBullCowGame BCGame; // instantiate a new game
+    int MaxTries = BCGame.GetMaxTries();
     
     //loop for the number of turns asking for guesses
     constexpr int NUMBER_OF_TURNS = 10;
@@ -58,8 +60,9 @@ void PlayGame() {
 }
 
 std::string GetGuess(){
+    int CurrentTry = BCGame.GetCurrentTry();
     //get a guess from player
-    std::cout << "Enter your guess: ";
+    std::cout <<  "Attempt #" << CurrentTry << " | Enter your guess: ";
     std::string Guess =  "";
     getline(std::cin,Guess);
     return Guess;
