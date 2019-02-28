@@ -16,10 +16,11 @@
 
 class FBullCowGame{ //other files start with F by Unreal standards
 public:
+    int GetMaxTries() const; 
+    int GetCurrentTry() const;
+    bool IsGameWon() const;
+    
     void Reset();
-    int GetMaxTries();
-    int GetCurrentTry();
-    bool IsGameWon();
     bool CheckGuessValidity(std::string);
 
 
