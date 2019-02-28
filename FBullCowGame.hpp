@@ -16,6 +16,8 @@
 
 class FBullCowGame{ //other files start with F by Unreal standards
 public:
+    FBullCowGame(); //constructor
+    
     int GetMaxTries() const; 
     int GetCurrentTry() const;
     bool IsGameWon() const;
@@ -26,7 +28,6 @@ public:
 
 
 private: //instance variables
-    int MyCurrentTry = 1;
-    int MyMaxTries = 5;
-
+    int MyCurrentTry ; //see constructor for initilization
+    int MyMaxTries ;
 };

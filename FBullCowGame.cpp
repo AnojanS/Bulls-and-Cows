@@ -8,6 +8,12 @@
 
 #include "FBullCowGame.hpp"
 
+//Constructor
+FBullCowGame::FBullCowGame() {
+    Reset();
+}
+
+//Getters
 int FBullCowGame::GetMaxTries() const {return MyMaxTries; }
 int FBullCowGame::GetCurrentTry() const { return MyCurrentTry;};
 
@@ -20,8 +26,14 @@ bool FBullCowGame::CheckGuessValidity(std::string) {
 }
 
 void FBullCowGame::Reset(){
+    
+    constexpr int MAX_TRIES = 10;
+    MyMaxTries = MAX_TRIES;
+    
+    MyCurrentTry = 1;
     return;
 }
+
 
 
 

@@ -47,6 +47,7 @@ FBullCowGame BCGame; // instantiate a new game
 
 void PlayGame() {
     
+    BCGame.Reset();
     int MaxTries = BCGame.GetMaxTries();
     
     //loop for the number of turns asking for guesses
