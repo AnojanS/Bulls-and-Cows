@@ -14,20 +14,23 @@
 
 #endif /* FBullCowGame_hpp */
 
+using FString = std::string;
+using int32 = int;
+
 class FBullCowGame{ //other files start with F by Unreal standards
 public:
     FBullCowGame(); //constructor
     
-    int GetMaxTries() const; 
-    int GetCurrentTry() const;
+    int32 GetMaxTries() const;
+    int32 GetCurrentTry() const;
     bool IsGameWon() const;
     
     void Reset();
-    bool CheckGuessValidity(std::string);
+    bool CheckGuessValidity(FString);
 
 
 
 private: //instance variables
-    int MyCurrentTry ; //see constructor for initilization
-    int MyMaxTries ;
+    int32 MyCurrentTry ; //see constructor for initilization
+    int32 MyMaxTries ;
 };
