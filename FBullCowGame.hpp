@@ -17,11 +17,9 @@
 using FString = std::string;
 using int32 = int;
 
-struct BullCowCount{
-    
+struct FBullCowCount{
     int32 Bulls = 0;
     int32 Cows = 0;
-    
 };
 
 class FBullCowGame{ //other files start with F by Unreal standards
@@ -35,7 +33,7 @@ public:
     void Reset();
     bool CheckGuessValidity(FString);
     
-    BullCowCount SubmitGuess(FString); 
+    FBullCowCount SubmitGuess(FString);
 
 
 private: //instance variables
