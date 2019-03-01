@@ -33,9 +33,25 @@ void FBullCowGame::Reset(){
     constexpr int32 MAX_TRIES = 10;
     MyMaxTries = MAX_TRIES;
     
+    const FString HIDDEN_WORD = "planet";
+    MyHiddenWord = HIDDEN_WORD;
+    
     MyCurrentTry = 1;
     return;
 }
+
+BullCowCount FBullCowGame::SubmitGuess(FString) { //receives a valid guess, increments turn, returns count
+    
+    //increment attempt
+    MyCurrentTry++;
+    
+    //setup return variable
+    BullCowCount BullCowCount;
+    
+    //loop through all letters in the guess
+    return BullCowCount;
+}
+
 
 
 

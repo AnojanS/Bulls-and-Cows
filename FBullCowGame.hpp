@@ -17,6 +17,13 @@
 using FString = std::string;
 using int32 = int;
 
+struct BullCowCount{
+    
+    int32 Bulls = 0;
+    int32 Cows = 0;
+    
+};
+
 class FBullCowGame{ //other files start with F by Unreal standards
 public:
     FBullCowGame(); //constructor
@@ -27,10 +34,12 @@ public:
     
     void Reset();
     bool CheckGuessValidity(FString);
-
+    
+    BullCowCount SubmitGuess(FString); 
 
 
 private: //instance variables
     int32 MyCurrentTry ; //see constructor for initilization
     int32 MyMaxTries ;
+    FString MyHiddenWord;
 };
