@@ -25,8 +25,8 @@ bool FBullCowGame::IsGameWon() const {
     return false;
 }
 
-bool FBullCowGame::CheckGuessValidity(FString) const {
-    return false;
+EWordStatus FBullCowGame::CheckGuessValidity(FString) const {
+    return EWordStatus::OK;
 }
 
 void FBullCowGame::Reset(){

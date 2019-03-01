@@ -22,7 +22,7 @@ bool AsktoPlayAgain();
 
 FBullCowGame BCGame; // instantiate a new game
 
-//Main------------------------------------------------------
+//MAIN------------------------------------------------------
 int main(int32 argc, const char * argv[]) {
     
     bool bPlayAgain = false;
@@ -38,7 +38,7 @@ int main(int32 argc, const char * argv[]) {
 }
 //END OF MAIN-----------------------------------------------
 
-//Function Implementations
+//Function Implementations---------------------------------------------------------------------------
 void PrintIntro (){
     //game intro
     //constexpr int32 WORD_LENGTH = 5;
