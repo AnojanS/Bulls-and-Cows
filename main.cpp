@@ -20,6 +20,8 @@ void PlayGame();
 Ftext GetGuess();
 bool AsktoPlayAgain();
 
+FBullCowGame BCGame; // instantiate a new game
+
 //Main------------------------------------------------------
 int main(int32 argc, const char * argv[]) {
     
@@ -39,15 +41,14 @@ int main(int32 argc, const char * argv[]) {
 //Function Implementations
 void PrintIntro (){
     //game intro
-    constexpr int32 WORD_LENGTH = 5;
+    //constexpr int32 WORD_LENGTH = 5;
     
     std::cout << "Welcome to the Bulls and Cows word game!\n";
-    std::cout << "Can you guess the " << WORD_LENGTH << " letter isogram?\n";
+    std::cout << "Can you guess the " << BCGame.GetHiddenWordLength() << " letter isogram?\n";
     std::cout << std::endl;
     return;
 }
 
-FBullCowGame BCGame; // instantiate a new game
 
 void PlayGame() {
     
