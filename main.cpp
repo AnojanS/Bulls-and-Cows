@@ -40,9 +40,8 @@ int main(int32 argc, const char * argv[]) {
 
 //Function Implementations---------------------------------------------------------------------------
 void PrintIntro (){
-    //game intro
-    //constexpr int32 WORD_LENGTH = 5;
     
+    //game intro
     std::cout << "Welcome to the Bulls and Cows word game!\n";
     std::cout << "Can you guess the " << BCGame.GetHiddenWordLength() << " letter isogram?\n";
     std::cout << std::endl;
@@ -56,9 +55,10 @@ void PlayGame() {
     int32 MaxTries = BCGame.GetMaxTries();
     
     //loop for the number of turns asking for guesses
-    constexpr int32 NUMBER_OF_TURNS = 10;
-    for (int32 i=1; i<=NUMBER_OF_TURNS; i++){
-        Ftext Guess = GetGuess(); //TODO make guess checking validation
+    for (int32 i=1; i <= MaxTries; i++){
+        Ftext Guess = GetGuess();
+        
+        EGuessStatus Status = BCGame.CheckGuessValidity(Guess);
         
         //Submit valid guess to game and receive counts
         FBullCowCount BullCowCount = BCGame.SubmitGuess(Guess);
@@ -66,7 +66,7 @@ void PlayGame() {
         //Print number of bulls and cows
         std::cout << "Your guess was: " << Guess << std::endl;
         std::cout << "Bulls = " << BullCowCount.Bulls;
-        std::cout << "     Cows = " << BullCowCount.Cows << std::endl;
+        std::cout << "    Cows = " << BullCowCount.Cows << std::endl;
         std::cout << std::endl;
     }
     
