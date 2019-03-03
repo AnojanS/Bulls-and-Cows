@@ -31,7 +31,7 @@ EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const {
     if (false){
         return EGuessStatus::Not_Isogram;
     }
-    //if user attempt isn't all lowercase return error
+    //if user attempt isn't all lowercase letters return error
     else if (false){
         return EGuessStatus::Not_Lowercase;
     }
