@@ -97,7 +97,7 @@ Ftext GetValidGuess(){
         default:
             break; //passed all input error checks
         }
-        std::cout << std::endl;
+        std::cout << std::endl << std::endl;
     } while(Status != EGuessStatus::OK); //keep looping until user enters guess with no errors
     return Guess;
 }

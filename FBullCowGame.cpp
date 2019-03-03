@@ -7,6 +7,8 @@
 //
 
 #include "FBullCowGame.hpp"
+#include <string>
+#include <iostream>
 #include <map>
 #define TMap std::map
 
@@ -43,7 +45,7 @@ EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const {
         return EGuessStatus::Not_Isogram;
     }
     //if user attempt isn't all lowercase letters return error
-    else if (false){
+    else if (!IsLowerCase(Guess)){
         return EGuessStatus::Not_Lowercase;
     }
     //if user attempt isn't correct length return error
@@ -104,6 +106,14 @@ bool FBullCowGame::IsIsogram(FString Word) const{
     return true;
 }
 
+bool FBullCowGame::IsLowerCase(FString Word) const {
+    for (auto Letter : Word){
+        if (!islower(Letter)){
+            return false;
+        }
+    }
+    return true;
+}
 
 
 
