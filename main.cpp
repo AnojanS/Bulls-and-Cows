@@ -10,6 +10,8 @@
 #include <iostream>
 #include <string>
 #include "FBullCowGame.hpp"
+#include <map>
+#define TMap std::map
 
 using Ftext = std::string;
 using int32 = int;
