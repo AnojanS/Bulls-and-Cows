@@ -46,7 +46,6 @@ public:
 
 private: //instance variables
     int32 MyCurrentTry ; //see constructor for initilization
-    int32 MyMaxTries ;
     FString MyHiddenWord;
     bool bGameIsWon;
     

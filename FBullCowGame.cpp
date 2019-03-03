@@ -19,7 +19,6 @@ using int32 = int;
 FBullCowGame::FBullCowGame() {Reset();}
 
 //Getters
-int32 FBullCowGame::GetMaxTries() const {return MyMaxTries;}
 int32 FBullCowGame::GetCurrentTry() const {return MyCurrentTry;}
 int32 FBullCowGame::GetHiddenWordLength() const {return MyHiddenWord.length();}
 bool FBullCowGame::IsGameWon() const {return bGameIsWon;}
@@ -27,16 +26,17 @@ bool FBullCowGame::IsGameWon() const {return bGameIsWon;}
 
 void FBullCowGame::Reset(){
     
-    constexpr int32 MAX_TRIES = 10;
     const FString HIDDEN_WORD = "planet";
-    
-    MyMaxTries = MAX_TRIES;
     MyHiddenWord = HIDDEN_WORD;
     MyCurrentTry = 1;
     bGameIsWon = false;
     return;
 }
 
+int32 FBullCowGame::GetMaxTries() const {
+    TMap <int32,int32> WordLengthtoMaxTries {{3,4},{4,7},{5,10},{6,15},{7,20}};
+    return WordLengthtoMaxTries[MyHiddenWord.length()];
+}
 
 EGuessStatus FBullCowGame::CheckGuessValidity(FString Guess) const {
     
