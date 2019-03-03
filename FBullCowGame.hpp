@@ -41,11 +41,12 @@ public:
     EGuessStatus CheckGuessValidity(FString) const;
     
     void Reset();
-    FBullCowCount SubmitGuess(FString);
+    FBullCowCount SubmitValidGuess(FString);
 
 
 private: //instance variables
     int32 MyCurrentTry ; //see constructor for initilization
     int32 MyMaxTries ;
     FString MyHiddenWord;
+    bool bGameIsWon;
 };
