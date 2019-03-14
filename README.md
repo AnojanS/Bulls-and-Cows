@@ -3,4 +3,4 @@ A tricky word game played in the console where users have a given number of atte
 
 By including classes, maps, loops, enumerations, libraries, a header file and other fundamentals, this game proved to be a solid intro to C++. 
 
-Program is coded under Unreal coding standards (int32, FString, FText, etc) as an introduction to coding with the Unreal game engine.
+Program is coded under Unreal coding standards (int32, FString, FText, etc) as practice for coding with the Unreal game engine.
